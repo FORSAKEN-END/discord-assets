@@ -1,22 +1,36 @@
 /**
- * @name Subaru_Fire_TEST_2
+ * @name Subaru_Fire_Theme
  * @author Strix
- * @description Test fond direct sur l'app
- * @version 1
+ * @description Subaru Pride Fire Edition (PNG Imgur)
+ * @version 2
  */
 
-/* Fond direct sur l'app */
-#app-mount .app__160d8 {
-  background-color: transparent !important;
-  background-image: url("https://i.imgur.com/8fK4h7R.jpeg");
+/* Fond Subaru Fire */
+#app-mount::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://i.imgur.com/q7evtad.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -2;
+  pointer-events: none;
 }
 
 /* Discord transparent */
 html, body, #app-mount {
   background: transparent !important;
+}
+
+/* Overlay rouge feu */
+#app-mount::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 0, 0, 0.40);
+  mix-blend-mode: multiply;
+  z-index: -1;
 }
 
 /* Panneaux transparents */
@@ -28,4 +42,34 @@ html, body, #app-mount {
 .scroller-3X7KbA,
 .content-1SgpWY {
   background: transparent !important;
+}
+
+/* Couleurs globales */
+:root {
+  --accent: #ff1a1a;
+  --text-normal: #ffffff;
+  --text-muted: #ff4d4d;
+}
+
+/* Bordures rouges */
+* {
+  border-color: var(--accent) !important;
+}
+
+/* Vignette sombre premium */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.75) 100%);
+  z-index: 0;
+}
+
+/* Glow rouge sur les textes importants */
+.markup-eYLPri,
+.username-3JL4Kh,
+.title-338goq,
+.name-3Uvkvr {
+  text-shadow: 0 0 6px rgba(255, 40, 40, 0.7);
 }
