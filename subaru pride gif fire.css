@@ -1,36 +1,22 @@
 /**
- * @name Subaru_Fire_TEST
+ * @name Subaru_Fire_TEST_2
  * @author Strix
- * @description Test pour vérifier si Discord charge l'image
+ * @description Test fond direct sur l'app
  * @version 1
  */
 
-/* Fond de test (Imgur = marche toujours) */
-#app-mount::before {
-  content: "";
-  position: fixed;
-  inset: 0;
+/* Fond direct sur l'app */
+#app-mount .app__160d8 {
+  background-color: transparent !important;
   background-image: url("https://i.imgur.com/8fK4h7R.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -2;
-  pointer-events: none;
 }
 
 /* Discord transparent */
 html, body, #app-mount {
   background: transparent !important;
-}
-
-/* Overlay rouge (pour voir si le thème charge) */
-#app-mount::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 0, 0, 0.40);
-  mix-blend-mode: multiply;
-  z-index: -1;
 }
 
 /* Panneaux transparents */
@@ -42,12 +28,4 @@ html, body, #app-mount {
 .scroller-3X7KbA,
 .content-1SgpWY {
   background: transparent !important;
-}
-
-/* Glow rouge pour vérifier que le CSS s'applique */
-.markup-eYLPri,
-.username-3JL4Kh,
-.title-338goq,
-.name-3Uvkvr {
-  text-shadow: 0 0 6px rgba(255, 40, 40, 0.7);
 }
