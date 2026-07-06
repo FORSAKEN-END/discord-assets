@@ -1,6 +1,6 @@
 /* --- Subaru Pride — Fire Red Theme (Strix) --- */
 
-/* Fond Subaru HD */
+/* Fond Subaru HD (image principale) */
 #app-mount::before {
   content: "";
   position: fixed;
@@ -13,12 +13,12 @@
   pointer-events: none;
 }
 
-/* Fix obligatoire : Discord transparent */
+/* Fix obligatoire : Discord doit être transparent */
 html, body, #app-mount {
   background: transparent !important;
 }
 
-/* Bandes / overlay rouge feu */
+/* Overlay rouge feu (bandes rouges + ambiance) */
 #app-mount::after {
   content: "";
   position: fixed;
@@ -28,16 +28,18 @@ html, body, #app-mount {
   z-index: -1;
 }
 
-/* Transparence des panneaux */
+/* Transparence des panneaux Discord */
 .theme-dark, .theme-light,
 .container-2RRFHK,
 .chatContent-3KubbW,
 .sidebar-1tnWFu,
-.membersWrap-3NUR2t {
+.membersWrap-3NUR2t,
+.scroller-3X7KbA,
+.content-1SgpWY {
   background: transparent !important;
 }
 
-/* Accent rouge */
+/* Accent rouge global */
 :root {
   --accent: #ff1a1a;
   --text-normal: #ffffff;
@@ -49,7 +51,7 @@ html, body, #app-mount {
   border-color: var(--accent) !important;
 }
 
-/* Vignette sombre */
+/* Vignette sombre pour un effet premium */
 body::after {
   content: "";
   position: fixed;
@@ -59,7 +61,10 @@ body::after {
   z-index: 0;
 }
 
-/* Lueur rouge sur les textes */
-.markup-eYLPri, .username-3JL4Kh, .title-338goq {
+/* Glow rouge sur les textes */
+.markup-eYLPri,
+.username-3JL4Kh,
+.title-338goq,
+.name-3Uvkvr {
   text-shadow: 0 0 6px rgba(255, 40, 40, 0.7);
 }
