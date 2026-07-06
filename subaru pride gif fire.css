@@ -5,357 +5,71 @@
  * @version 1
  */
 
-#app-mount .app__160d8 {
-  background-color: transparent;
-  background-size: cover;
+/* Fond Subaru Fire */
+#app-mount::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image: url("https://files.catbox.moe/bcma7k.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Discord transparent (obligatoire) */
+html, body, #app-mount {
+  background: transparent !important;
+}
+
+/* Overlay rouge feu */
+#app-mount::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 0, 0, 0.40);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+/* Panneaux transparents */
+.theme-dark, .theme-light,
+.container-2RRFHK,
+.chatContent-3KubbW,
+.sidebar-1tnWFu,
+.membersWrap-3NUR2t,
+.scroller-3X7KbA,
+.content-1SgpWY {
+  background: transparent !important;
+}
+
+/* Couleurs globales */
+:root {
+  --accent: #ff1a1a;
+  --text-normal: #ffffff;
+  --text-muted: #ff4d4d;
+}
+
+/* Bordures rouges */
+* {
+  border-color: var(--accent) !important;
+}
+
+/* Vignette sombre premium */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.75) 100%);
+  z-index: 0;
+}
+
+/* Glow rouge sur les textes importants */
+.markup-eYLPri,
+.username-3JL4Kh,
+.title-338goq,
+.name-3Uvkvr {
+  text-shadow: 0 0 6px rgba(255, 40, 40, 0.7);
 }
-
-/* Missing Create Thread Layer */
-.container_fb64c9 {
-  background: none;
-}
-
-.visual-refresh .scroller__23746,
-.visual-refresh .container__551b0 {
-  background: none;
-}
-
-/* New Stuff */
-.switchContainer_eda416,
-.headerContainer__7db08 {
-  background-color: rgba(0, 0, 0, .6);
-  border-radius: 3px;
-}
-
-.radioIndicatorChecked__1bda4 .refreshIconFill__1bda4 {
-  fill: #000;
-}
-
-.radioIndicatorChecked__1bda4 .refreshIconStroke__1bda4 {
-  stroke: #000;
-}
-
-.tag_e7c728 {
-  background-color: #18142b !important;
-  border: #000;
-}
-
-.chipletContainerInner__10651 {
-  background: #18142b;
-}
-
-.chipletContainerInner__10651 .text__10651 {
-  color: #FFF !important;
-}
-
-.backdrop__8a7fc,
-.container__956c6 {
-  background: #000;
-}
-
-.container__960ef {
-  border: none;
-}
-
-.shop__6db1d {
-  background-color: rgba(0, 0, 0, .4);
-  border-top: none;
-}
-
-.shopCardDark_c3d04b,
-.shopCardLight_c3d04b {
-  background-color: rgba(0, 0, 0, .8);
-}
-
-.darkCardBackground_c3d04b,
-.lightCardBackground_c3d04b,
-.homeWrapper__0920e {
-  background-color: #000;
-  border-top: none;
-}
-
-#app-mount .clickable_c99c29 {
-  color: #FFF;
-}
-
-.container_ce5f0d,
-.container__99d5f {
-  background: rgba(0, 0, 0, .2);
-  border: none;
-}
-
-.container__53cea,
-.container_dca174 {
-  background: #000;
-  border: none;
-  box-shadow: none;
-}
-
-.mainTableContainer_fa2640,
-.movedTable_fa2640 {
-  background-color: #000;
-}
-
-.option__56fec[aria-selected=true] {
-  box-shadow: inset 2px 0 0 0 #000;
-}
-
-.chipletContainerInner__10651.noTooltip__10651:hover {
-  background-color: #000;
-}
-
-.profile__9c3be {
-  background: none;
-  box-shadow: none;
-  outline: none;
-}
-
-#app-mount .profile__9c3be .lookFilled__201d5.colorPrimary__201d5 {
-  background-color: #000;
-  border-color: rgba(255, 255, 255, .3);
-  color: #FFF;
-}
-
-.formWithLoadedChatInput_f75fb0:before,
-.chatTypingGradientNotAtBottom__36d07,
-.chatGradient__36d07 {
-  background: none;
-}
-
-.guildInviteContainer__083ae {
-  background: #000;
-  border: none;
-}
-
-.footerContent__083ae,
-.avatarWrapper_dca174 {
-  background: #000;
-}
-
-.sortDropdown_f369db:hover,
-.tagsButton_f369db:hover {
-  background: rgba(0, 0, 0, .8);
-}
-
-.align-chat-input .attachButtonInner__0923f:hover {
-  background-color: #000;
-}
-
-#app-mount .side_b3f026 .destructive_b3f026.item_b3f026:hover:not(.disabled_b3f026),
-#app-mount .topPill_b3f026 .destructive_b3f026.item_b3f026:hover:not(.disabled_b3f026) {
-  background-color: rgba(0, 0, 0, .5) !important;
-  border: 2px outset transparent;
-  color: #FFF;
-}
-
-.chatTypingGradientAtBottom__36d07 {
-  background: none;
-}
-
-.emptyContainer_de8069 {
-  background-color: rgba(0, 0, 0, .6);
-  border-radius: 3px;
-}
-
-.premiumBrandRefreshHeader_e50a4d,
-.skuSelectModalContent_e50a4d.premiumBrandRefreshContent_e50a4d.premiumBrandRefreshContent_e50a4d {
-  background-color: transparent;
-}
-
-.divider__6df1a {
-  opacity: 0;
-}
-
-.card__6df1a {
-  background: rgba(0, 0, 0, .2);
-  border: none;
-}
-
-.contentWrapper__9c62c {
-  background-color: rgba(0, 0, 0, .6);
-  box-shadow: none;
-}
-
-.footer__214dc {
-  background: none;
-}
-
-.gradient__214dc {
-  opacity: 0 !important;
-}
-
-.theme-dark .scrollerContainer__5d7c9,
-.theme-dark .emptyPage__5d7c9,
-.separator__5d7c9 {
-  background-color: transparent;
-}
-
-#app-mount .container__0b563,
-#app-mount .header__0b563 {
-  background-color: transparent !important;
-}
-
-#app-mount .pageBody__41ed7 {
-  background: none;
-}
-
-.executedCommand_ec86aa,
-.repliedMessage_ec86aa,
-.threadMessageAccessory_ec86aa {
-  margin-left: 17px;
-}
-
-.theme-dark .activityUserPopoutV2__2ef49 .headerText__2ef49,
-.theme-light .activityUserPopoutV2__2ef49 .headerText__2ef49,
-.theme-dark .activityBiteSizePopout__2ef49 .headerText__2ef49,
-.theme-light .activityBiteSizePopout__2ef49 .headerText__2ef49 {
-  color: white;
-}
-
-/* Members List */
-.page_c791b2 {
-  background: none !important;
-}
-
-.visual-refresh .mainTableContainer__09a38 {
-  background: rgba(0, 0, 0, .6);
-  box-shadow: none;
-}
-
-.memberRowContainer__71c22:hover td {
-  background-color: black;
-}
-
-.container__3a5a1,
-.header__3a5a1 {
-  box-shadow: none;
-  background-color: black !important;
-}
-
-.keyComboInner__3a5a1,
-.keyComboInner__15c82 {
-  color: white !important;
-}
-
-.memberRowContainer__71c22.memberSelected__71c22 td {
-  background: rgba(255, 255, 255, .1);
-}
-
-.headerContainer__1ef77 .eyebrow_cf4812 {
-  color: white !important;
-}
-
-.viewAllPermissions__1ef77 path {
-  fill: white;
-}
-
-.innerContainer__656be {
-  color: white;
-}
-
-.container__34940 {
-  border-radius: 3px;
-  background-color: transparent;
-  box-shadow: none;
-  border: 1px solid rgba(205, 205, 205, .3);
-}
-
-.topRow__34940,
-.bottomRowAction__34940 {
-  background-color: rgba(205, 205, 205, .1) !important;
-}
-
-#app-mount .bottomRowAction__34940,
-#app-mount .bottomRowAction__34940 .text-sm\/normal_cf4812 {
-  color: white;
-}
-
-#app-mount .bottomRowAction__34940 path {
-  fill: white;
-}
-
-.topRow__34940 :where([style*="color:"]) {
-  color: white !important;
-}
-
-.memberRowContainer__71c22 td:after {
-  background: none;
-}
-
-.paginationContainer_e8f197 {
-  border-top: none;
-}
-
-.modInfoAction__96c0b {
-  color: white;
-  box-shadow: none;
-}
-
-.modInfoItemContainer__96c0b {
-  border-radius: 3px;
-  box-shadow: none;
-}
-
-#app-mount .modInfoAction__96c0b {
-  color: white;
-}
-
-.theme-dark .modInfoItem__96c0b :where(.text-sm\/semibold_cf4812, .text-sm\/medium_cf4812) {
-  color: white !important;
-}
-
-.modInfoItem__96c0b path {
-  fill: white;
-}
-
-.modInfoItem__96c0b {
-  background-color: rgba(205, 205, 205, .2) !important;
-  border: 1px solid rgba(205, 205, 205, .3);
-  box-shadow: none;
-}
-
-.backButton__15c82 path {
-  fill: white;
-}
-
-.channelNameIcon_c68065,
-.channelNameText_c68065,
-.parentChannelNameIcon_c68065 {
-  color: white;
-}
-
-#app-mount .searchResult__02a39 {
-  background-color: rgba(205, 205, 205, .2) !important;
-  border: 1px solid rgba(205, 205, 205, .3);
-  border-radius: 3px;
-}
-
-.innerContainer__39de8 li>div {
-  background-color: transparent !important;
-  box-shadow: none;
-}
-
-.otherRoles__71c22,
-#app-mount .button__71c22 {
-  border-radius: 3px;
-  background-color: rgba(205, 205, 205, .2);
-  border: 1px solid rgba(205, 205, 205, .3);
-}
-
-.addRoleIcon__71c22,
-#app-mount .actionCell__71c22 {
-  color: white;
-}
-
-#app-mount .selected__97e86 {
-  background-color: black;
-}
-
-#app-mount .button__7d7f7 {
-  background: rgba(205, 205, 205, .2);
-  color: white;
-  border: 2px outset rgba(205, 205, 205, .3);
-}
-
-/* FIN DU SCRIPT — Subaru Fire Edition */
