@@ -18,7 +18,7 @@ html, body, #app-mount {
   background: transparent !important;
 }
 
-/* Overlay rouge feu */
+/* Bandes / overlay rouge feu */
 #app-mount::after {
   content: "";
   position: fixed;
