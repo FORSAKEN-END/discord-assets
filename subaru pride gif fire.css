@@ -1,6 +1,3 @@
-/* --- Subaru Pride IF — Fire Red Theme (Strix) --- */
-
-/* Fond statique HD */
 body::before {
   content: "";
   position: fixed;
@@ -13,54 +10,6 @@ body::before {
   pointer-events: none;
 }
 
-/* Fix obligatoire : Discord transparent */
-#app-mount,
-html, body {
+html, body, #app-mount {
   background: transparent !important;
-}
-
-/* Overlay rouge feu */
-#app-mount::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 0, 0, 0.40);
-  mix-blend-mode: multiply;
-  z-index: 0;
-}
-
-/* Transparence propre */
-.theme-dark, .theme-light,
-.container-2RRFHK,
-.chatContent-3KubbW,
-.sidebar-1tnWFu,
-.membersWrap-3NUR2t {
-  background: transparent !important;
-}
-
-/* Accent rouge */
-:root {
-  --accent: #ff1a1a;
-  --text-normal: #ffffff;
-  --text-muted: #ff4d4d;
-}
-
-/* Bordures rouges */
-* {
-  border-color: var(--accent) !important;
-}
-
-/* Vignette sombre */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.75) 100%);
-  z-index: 1;
-}
-
-/* Lueur rouge */
-.markup-eYLPri, .username-3JL4Kh, .title-338goq {
-  text-shadow: 0 0 6px rgba(255, 40, 40, 0.7);
 }
